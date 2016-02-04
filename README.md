@@ -1,4 +1,3 @@
 # isomorphic-react
-ReactJS + NodeJS demo. Universal/Isomorphic JavaScript
 
-http://maximdenisov.ru/articles/22/
+Исходный код для статьи - http://maximdenisov.ru/articles/22/
