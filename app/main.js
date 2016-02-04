@@ -1,8 +1,12 @@
 /** @jsx React.DOM */
 
-var React = require('react/addons');
+var React = require('react');
+var ReactDOM = require('react-dom');
 var ReactApp = require('./components/ReactApp');
 
 var mountNode = document.getElementById('react-main-mount');
 
-React.render(new ReactApp({}), mountNode);
+ReactDOM.render(
+  <ReactApp />,
+  mountNode
+);

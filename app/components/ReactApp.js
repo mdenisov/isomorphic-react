@@ -1,6 +1,6 @@
 /** @jsx React.DOM */
 
-var React = require('react/addons');
+var React = require('react');
 
 /* create factory with griddle component */
 var Griddle = React.createFactory(require('griddle-react'));
@@ -10,24 +10,24 @@ var columnMeta = require('../data/columnMeta.js').columnMeta;
 var resultsPerPage = 200;
 
 var ReactApp = React.createClass({
+  componentDidMount: function () {
+    console.log(fakeData);
+  },
+  render: function () {
+    return (
+      <div id="table-area">
 
-      componentDidMount: function () {
-        console.log(fakeData);
+      <Griddle
+        results={fakeData}
+        columnMetadata={columnMeta}
+        resultsPerPage={resultsPerPage}
+        tableClassName="table"
+        />
 
-      },
-      render: function () {
-        return (
-          <div id="table-area">
-
-             <Griddle results={fakeData}
-                      columnMetadata={columnMeta}
-                      resultsPerPage={resultsPerPage}
-                      tableClassName="table"/>
-
-          </div>
-        )
-      }
-  });
+      </div>
+    )
+  }
+});
 
 /* Module.exports instead of normal dom mounting */
 module.exports = ReactApp;

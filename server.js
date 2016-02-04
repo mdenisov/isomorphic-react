@@ -3,7 +3,7 @@
 var express = require('express'),
 path = require('path'),
 app = express(),
-port = 4444,
+port = 8000,
 bodyParser = require('body-parser');
 
 // Make sure to include the JSX transpiler
@@ -17,7 +17,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // Set up Routes for the application
-require('./app/routes/core-routes.js')(app);
+require('./app/routes/coreRoutes.js')(app);
 
 //Route not found -- Set 404
 app.get('*', function(req, res) {
