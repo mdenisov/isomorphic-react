@@ -1,5 +1,5 @@
 {
-  "name": "node-authentication",
+  "name": "isomorphic-react",
   "main": "server.js",
   "dependencies": {
     "body-parser": "~1.14.2",
